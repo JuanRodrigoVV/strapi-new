@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "texts",
+  "info": {
+    "singularName": "text",
+    "pluralName": "texts",
+    "displayName": "Text"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text_content": {
+      "type": "text"
+    },
+    "text_image": {
+      "type": "string"
+    },
+    "modals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modal.modal",
+      "mappedBy": "text"
+    }
+  }
+}
