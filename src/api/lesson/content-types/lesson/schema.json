@@ -4,17 +4,18 @@
   "info": {
     "singularName": "lesson",
     "pluralName": "lessons",
-    "displayName": "Lesson"
+    "displayName": "Lesson",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Lesson_title": {
+    "lesson_title": {
       "type": "string"
     },
-    "Lesson_Description": {
+    "lesson_description": {
       "type": "text"
     },
     "course_relation": {
@@ -32,6 +33,21 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::video.video",
+      "mappedBy": "lesson"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "lessons"
+    },
+    "lesson_URL": {
+      "type": "string"
+    },
+    "texts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::text.text",
       "mappedBy": "lesson"
     }
   }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "modal",
     "pluralName": "modals",
-    "displayName": "modal"
+    "displayName": "modal",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,18 @@
       "relation": "manyToOne",
       "target": "api::text.text",
       "inversedBy": "modals"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "modal_text": {
+      "type": "text"
+    },
+    "modal_videoURL": {
+      "type": "string"
+    },
+    "modal_imageURL": {
+      "type": "string"
     }
   }
 }

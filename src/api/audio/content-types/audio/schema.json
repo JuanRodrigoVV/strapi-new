@@ -21,10 +21,10 @@
       "target": "api::lesson.lesson",
       "inversedBy": "audio_Relation"
     },
-    "Audio_Image": {
+    "audio_image": {
       "type": "string"
     },
-    "Audio_URL": {
+    "audio_URL": {
       "type": "string"
     }
   }

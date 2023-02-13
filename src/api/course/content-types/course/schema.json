@@ -12,14 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Course_title": {
+    "course_title": {
       "type": "string"
     },
-    "Course_Description": {
+    "course_description": {
       "type": "text"
     },
-    "Course_Image": {
+    "course_image": {
       "type": "string"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "course"
     }
   }
 }

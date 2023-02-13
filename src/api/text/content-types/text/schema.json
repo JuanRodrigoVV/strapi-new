@@ -4,7 +4,8 @@
   "info": {
     "singularName": "text",
     "pluralName": "texts",
-    "displayName": "Text"
+    "displayName": "Text",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,12 @@
       "relation": "oneToMany",
       "target": "api::modal.modal",
       "mappedBy": "text"
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lesson.lesson",
+      "inversedBy": "texts"
     }
   }
 }
